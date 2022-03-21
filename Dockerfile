@@ -16,7 +16,7 @@ RUN dotnet build "KafkaTriggerReceiveProcess.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "KafkaTriggerReceiveProcess.csproj" -c Release -o /app/publish
 
-FROM base AS final
-WORKDIR /home/site/wwwroot
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "KafkaTriggerReceiveProcess.dll"]
+#FROM base AS final
+#WORKDIR /home/site/wwwroot
+#COPY --from=publish /app/publish .
+#ENTRYPOINT ["dotnet", "KafkaTriggerReceiveProcess.dll"]
