@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 8080
 #ENV ASPNETCORE_URLS=http://*:8080
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1.0-buster AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["KafkaTriggerReceiveProcess.csproj", "."]
 RUN dotnet restore "./KafkaTriggerReceiveProcess.csproj"
