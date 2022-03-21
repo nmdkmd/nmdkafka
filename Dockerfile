@@ -2,8 +2,8 @@ FROM mcr.microsoft.com/azure-functions/dotnet:3.0 AS base
 #RUN mkdir app
 #COPY /src/* /app/
 WORKDIR /home/site/wwwroot
-EXPOSE 8080
-ENV ASPNETCORE_URLS=http://*:8080
+#EXPOSE 8080
+#ENV ASPNETCORE_URLS=http://*:8080
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /app
