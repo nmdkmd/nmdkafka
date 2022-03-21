@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/dotnet:6.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 #RUN mkdir app
 #COPY /src/* /app/
 WORKDIR /app
