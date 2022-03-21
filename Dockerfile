@@ -17,4 +17,4 @@ RUN dotnet publish "KafkaTriggerReceiveProcess.csproj" -c Release -o /app/publis
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["/snap/bin/dotnet","KafkaTriggerReceiveProcess.dll"]
+ENTRYPOINT ["KafkaTriggerReceiveProcess.dll"]
